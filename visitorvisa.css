@@ -1,0 +1,684 @@
+@import 'utilities.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --primary: rgb(228, 242, 228);
+    --secondary: rgb(131, 173, 118);
+    --ternary: rgb(181, 206, 181);
+    --light: rgb(255, 255, 255);
+    --dark: rgb(17, 7, 7);
+    --dark2: #f2f7f3;
+    --dark3: rgb(238, 237, 237);
+    --button: #00cc99;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+.keypad {
+    height: 1.2rem;
+
+}
+
+.contact-text-center {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 7rem;
+    background-color: var(--dark3);
+    padding: .6rem;
+
+}
+
+span {
+
+    margin-left: .5rem;
+    margin-top: 3rem;
+}
+
+.navbar {
+    background-color: var(--light);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.navi {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+
+
+}
+
+.navi .left img {
+    height: 60px;
+    margin-left: 2rem;
+}
+
+.navi .right {
+    text-align: center;
+}
+
+.navi .right a {
+    padding-right: .5rem;
+}
+
+.navi .middle a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 1.1rem;
+    padding: 6px;
+    transition: all .2s ease;
+
+
+}
+
+.navi .middle {
+    word-spacing: 2.5rem;
+    width: 740px;
+    margin-top: 1rem;
+
+}
+
+.navi .middle a:hover {
+    color: var(--light);
+    background-color: var(--dark3);
+    border-radius: .5rem;
+
+}
+
+.navi .btn {
+    margin-top: 1rem;
+}
+
+.navi .btn button {
+    padding: .5rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: .5rem;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+.belownavtext {
+    background-color: #f0f3f6;
+}
+
+.belownavtext .displayuse {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.belownavtext .displayuse .text {
+    margin: 14rem 0 0 7rem;
+}
+
+.belownavtext .displayuse .text button {
+    font-size: 1.5rem;
+    font-weight: 350;
+    background-color: var(--button);
+    border-radius: 1.2rem;
+    border: none;
+    padding: 1.2rem 1.5rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    color: var(--dark2);
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.belownavtext .displayuse .text button:hover {
+    background-color: var(--light);
+    color: var(--button);
+}
+
+.belownavtext .displayuse .text h1 {
+    font-size: 2.7rem;
+    font-weight: 550;
+}
+
+.secondbtn .first,
+.second {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all .2s ease;
+
+}
+
+.secondbtn .first {
+    color: var(--light);
+    background-color: var(--button);
+
+}
+
+.secondbtn .second {
+    color: var(--dark);
+    background-color: var(--light);
+    margin-left: 1rem;
+
+
+}
+
+.secondbtn .first:hover {
+    background-color: var(--light);
+    color: var(--button);
+}
+
+.secondbtn .second:hover {
+    color: var(--light);
+    background-color: skyblue;
+
+}
+
+.logotext {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+
+
+
+
+
+.visitorvisainfo div {
+    border-radius: 1.2rem;
+    margin-top: 3rem;
+    margin: 3rem 10rem 0;
+    padding: 2rem 3rem;
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.visitorvisainfo {
+    margin-top: 10rem;
+}
+
+.visitorvisainfo div p,
+ul {
+    padding-top: 1rem;
+    color: #938f8f;
+}
+
+.visitorvisainfo div h2 {
+    font-weight: 500;
+}
+
+
+
+
+.contact-form {
+    margin-top: 15rem;
+    margin-left: 9rem;
+    margin-right: 9rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    box-shadow: 5px 5px 5px 6px rgb(203, 227, 235);
+
+
+}
+
+.contact-form .head {
+    margin: 2rem 0;
+    font-size: 1.8rem;
+
+}
+
+.contact-form form .firstrow,
+.secondrow {
+    margin-left: 25%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 3rem;
+    margin-bottom: 3rem;
+
+
+}
+
+.contact-form .title {
+    padding-top: 3rem;
+}
+
+.contact-form form .mail,
+.contact {
+    margin-left: 0px;
+}
+
+.contact-form form textarea {
+
+    width: 65%;
+    height: 7rem;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    background-image: url("image/chat_20dp_FILL0_wght400_GRAD0_opsz20.png");
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+
+.contact-form form input,
+select,
+textarea {
+    width: 100%;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    background-size: 40px;
+    background-repeat: no-repeat;
+
+}
+
+::placeholder {
+    color: rgb(209, 221, 221);
+}
+
+.contact-form form input[id=username] {
+    background-image: url("image/person2.png");
+
+}
+
+.contact-form form input[id=email] {
+    background-image: url("image/mail.png");
+}
+
+.contact-form form input[id=phone] {
+    background-image: url("image/phone.png");
+}
+
+.contact-form form select[id=visatype] {
+    background-image: url("image/visaa.png");
+
+
+}
+
+.contact-form form select {
+    color: #616b68;
+}
+
+.contact-form form select:hover {
+    cursor: pointer;
+}
+
+.contact-form form select option {
+    font-size: 1rem;
+
+}
+
+.contact-form form .submit {
+    margin-top: 2.5rem;
+
+
+}
+
+.contact-form form .submit button {
+    font-size: 1.3rem;
+    padding: 1rem 3.5rem;
+    background-color: var(--button);
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    color: var(--light);
+    transition: all .2s ease;
+}
+
+.contact-form form .submit button:hover {
+    background-color: skyblue;
+    color: var(--light);
+    cursor: pointer;
+}
+
+
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 10rem;
+    grid-gap: 3rem;
+    margin-left: 3rem;
+
+}
+
+.footer-content .left h1 {
+    font-weight: 450;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+
+}
+
+.footer-content .left .contact {
+    margin-bottom: 2rem;
+
+}
+
+.footer-content .left img {
+    height: 50px;
+}
+
+.footer-content .left p {
+    font-weight: 500;
+}
+
+
+.footer-content .similar h1 {
+    font-weight: 450;
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.footer-content .similar li {
+    list-style-type: none;
+    padding-top: 1.2rem;
+    color: rgb(88, 82, 82);
+}
+
+.footer-content .similar li:hover {
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.container hr {
+    margin-top: .5rem;
+    color: var(--dark2);
+}
+
+.container .footer-para {
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.burger {
+    display: none;
+}
+
+
+
+/* Loading image styles */
+#loading-image {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+body.fade-out #loading-image {
+    display: block;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .contact-text-center {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 11px;
+        padding: 5px;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-text-center .left span {
+
+        margin: 0;
+    }
+
+    .left img,
+    .middle img,
+    .right img {
+        display: none;
+    }
+
+    .navi .left img {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .navbar .navi {
+        flex-direction: column;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .left {
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .burger {
+        position: absolute;
+        right: 10px;
+        font-size: 1.2rem;
+        display: block;
+        top: 0px;
+    }
+
+    .navi .middle,
+    .navi .right {
+        display: none;
+    }
+
+    .middle1.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn1.active {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30px;
+    }
+
+    .btn1 img {
+        display: flex;
+
+    }
+
+    .left1 img,
+    .middle1 img,
+    .right1 img {
+        display: none;
+    }
+
+    /* .belownav {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .belownav .imgtext {
+        display: flex;
+        flex-direction: column;
+        margin-top: -40px;
+    }
+
+    .belownav .imgtext .headingtext {
+        margin-right: 40px;
+        margin-top: -150px;
+        font-size: 3rem;
+
+    }
+
+    .belownav .imgtext .para {
+        font-size: 1.3rem;
+        margin-top: 40px;
+        margin-right: 50px;
+        color: #f7fffd;
+    } */
+
+    .belownavtext{
+      max-width: 100vw;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .belownavtext .displayuse .image{
+        display: none;
+    }
+
+    .belownavtext .displayuse .text{
+       
+        margin: 0;
+        padding: 10px;
+        max-width: 100vw;
+         
+
+    }
+    .belownavtext .displayuse .text h1{
+        font-size: 2.3rem;
+        
+        width: 100vw;
+        
+    }
+    .belownavtext .displayuse .text button{
+        padding: 5px;
+        font-size: 1.3rem;
+    }
+    .container .visitorvisainfo{
+        margin: 0;
+        padding: 0;
+        max-width: 100vw;
+    }
+    .container .visitorvisainfo .one, .container .visitorvisainfo .second2, .container .visitorvisainfo .third, .container .visitorvisainfo .fourth, .container .visitorvisainfo .fifth, .container .visitorvisainfo .sixth, .container .visitorvisainfo .seven, .container .visitorvisainfo .eight, .container .visitorvisainfo .nine, .container .visitorvisainfo .ten, .container .visitorvisainfo .eleven{
+        max-width: 100vw;
+        margin: 10px;
+        padding: 20px;
+    } 
+
+     
+
+    .vision {
+        display: flex;
+        flex-direction: column;
+        max-width: 100vw;
+        margin: 0 10px;
+    }
+
+    .vision .img img {
+        width: 50vw;
+        height: 20vh;
+    }
+
+    .vision .img {
+        margin: 0;
+    }
+
+    .vision .text {
+        font-size: 0.8rem;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .container-form {
+        max-width: 100vw;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .contact-form {
+       max-width: 100vw;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form form .firstrow {
+        display: flex;
+        flex-direction: column;
+        margin-left: 4px;
+        width: 90vw;
+    }
+
+    .contact-form form .secondrow {
+        display: flex;
+        flex-direction: column;
+        margin-left: 4px;
+        width: 90vw;
+    }
+
+    .contact-form form textarea {
+        display: flex;
+        flex-direction: column;
+        margin-left: 4px;
+        width: 90vw;
+    }
+
+    .contact-form form .submit button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        max-width: 100vw;
+        margin: 10px;
+    }
+
+    .footer-content .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+    }
+
+    
+        
+    }
+
+
+    @media screen and (max-width: 350px) {
+        .contact-text-center {
+            font-size: 8px;
+
+        }
+
+        .secondbtn .second {
+            font-size: 0.6rem;
+        }
+
+        .secondbtn .first {
+            font-size: 0.6rem;
+        }
+    }
